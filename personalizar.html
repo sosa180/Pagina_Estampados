@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personalizar tu prenda — Taller / Estampa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scanlines"></div>
+
+<header class="topbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">▣</span>
+    <span class="brand-text">TALLER<span class="brand-accent">/</span>ESTAMPA</span>
+  </a>
+  <nav class="nav">
+    <a href="galeria.html">Galería</a>
+    <a href="personalizar.html">Personalizar</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="#contacto" class="nav-cta">Pedir ahora</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO / PERSONALIZADOR -->
+  <section class="hero" id="personalizar">
+    <div class="hero-text">
+      <a href="index.html" class="back-link">← Volver al inicio</a>
+      <p class="eyebrow">Serigrafía · Camisetas · Buzos</p>
+      <h1 class="hero-title">
+        <span class="spray-line">Diseña tu</span>
+        <span class="spray-line">estampa</span>
+        <span class="spray-line hero-title-accent">en vivo.</span>
+      </h1>
+      <p class="hero-sub">Elige la prenda, el color de la tela y tu estampado. Lo que ves aquí es lo que sale del taller.</p>
+      <div class="hero-tags">
+        <span class="tag-pill">Algodón 100%</span>
+        <span class="tag-pill">Serigrafía y DTF</span>
+        <span class="tag-pill">Pedido mínimo: 1 unidad</span>
+      </div>
+    </div>
+
+    <div class="swatch-card" id="customizer">
+      <div class="swatch-tag">
+        <span class="swatch-tag-label">FICHA DE PRENDA</span>
+        <span class="swatch-tag-id">N.° <span id="orderId">0427</span></span>
+      </div>
+
+      <div class="mockup-stage">
+        <svg id="garmentSvg" viewBox="0 0 360 420" class="garment-svg">
+          <!-- Camiseta -->
+          <g id="garment-tshirt" class="garment-shape">
+            <path class="garment-fill" d="M120 18 L150 8 C160 28 200 28 210 8 L240 18 L300 55 L275 110 L240 92 L240 400 L120 400 L120 92 L85 110 L60 55 Z"/>
+            <path class="garment-shade" d="M120 18 L150 8 C160 28 200 28 210 8 L240 18 L235 32 C205 48 155 48 125 32 Z" opacity="0.18"/>
+          </g>
+          <!-- Buzo -->
+          <g id="garment-hoodie" class="garment-shape" style="display:none">
+            <path class="garment-fill" d="M115 25 C108 8 95 4 78 12 L40 35 L20 80 L55 100 L70 78 L70 400 L290 400 L290 78 L305 100 L340 80 L320 35 L282 12 C265 4 252 8 245 25 C225 42 135 42 115 25 Z"/>
+            <path class="garment-shade" d="M115 25 C135 42 225 42 245 25 L240 45 C215 58 145 58 120 45 Z" opacity="0.18"/>
+            <ellipse class="garment-shade" cx="180" cy="38" rx="34" ry="10" opacity="0.12"/>
+          </g>
+          <!-- Zona de estampado -->
+          <image id="printImage" x="130" y="140" width="100" height="100" preserveAspectRatio="xMidYMid meet" opacity="0"/>
+          <rect id="printZoneOutline" x="130" y="140" width="100" height="100" fill="none" stroke="#ffffff33" stroke-dasharray="4 4" rx="4"/>
+        </svg>
+      </div>
+
+      <div class="controls">
+
+        <div class="control-block">
+          <label class="control-label">01 / Tipo de prenda</label>
+          <div class="seg-control" id="garmentControl">
+            <button class="seg-btn active" data-garment="tshirt">Camiseta</button>
+            <button class="seg-btn" data-garment="hoodie">Buzo</button>
+          </div>
+        </div>
+
+        <div class="control-block">
+          <label class="control-label">02 / Color de tela</label>
+          <div class="color-row" id="colorControl">
+            <button class="color-dot active" style="--c:#0B0A12" data-color="#0B0A12" title="Negro asfalto"></button>
+            <button class="color-dot" style="--c:#F4F2F8" data-color="#F4F2F8" title="Blanco"></button>
+            <button class="color-dot" style="--c:#FF2EC4" data-color="#FF2EC4" title="Magenta neón"></button>
+            <button class="color-dot" style="--c:#1AFCEA" data-color="#1AFCEA" title="Cian eléctrico"></button>
+            <button class="color-dot" style="--c:#D9FF1E" data-color="#D9FF1E" title="Amarillo ácido"></button>
+            <button class="color-dot" style="--c:#2A0E45" data-color="#2A0E45" title="Violeta profundo"></button>
+          </div>
+        </div>
+
+        <div class="control-block">
+          <label class="control-label">03 / Estampado</label>
+          <div class="print-row" id="printControl">
+            <button class="print-thumb" data-print="" title="Sin estampado">
+              <span>Ø</span>
+            </button>
+            <button class="print-thumb active" data-print="https://api.iconify.design/ph/mountains-fill.svg?color=%23FF2EC4" title="Montañas"></button>
+            <button class="print-thumb" data-print="https://api.iconify.design/ph/lightning-fill.svg?color=%231AFCEA" title="Rayo"></button>
+            <button class="print-thumb" data-print="https://api.iconify.design/ph/flower-lotus-fill.svg?color=%23D9FF1E" title="Flor"></button>
+            <label class="print-thumb print-upload" title="Subir tu diseño">
+              <input type="file" id="printUpload" accept="image/*" hidden>
+              <span>↑</span>
+            </label>
+          </div>
+          <input type="range" id="printSize" min="40" max="160" value="100" class="size-slider">
+          <span class="control-hint">Tamaño del estampado</span>
+        </div>
+
+        <button class="cta-button" id="addToOrder">Agregar al pedido →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="contact-inner">
+      <h2 class="section-title">¿Listo para tu pedido?</h2>
+      <p class="section-sub">Escríbenos con tu diseño personalizado y te confirmamos precio y tiempos.</p>
+      <a href="https://wa.me/573000000000" class="cta-button cta-button-light" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Taller / Estampa</span>
+  <span class="footer-dot">·</span>
+  <span>Hecho a mano en Colombia</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

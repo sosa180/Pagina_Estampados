@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taller de Estampado — Camisetas y Buzos a tu medida</title>
+<title>Taller / Estampa — Camisetas, Buzos y Estampado Corporativo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -14,192 +14,42 @@
 <div class="scanlines"></div>
 
 <header class="topbar">
-  <a href="#top" class="brand">
+  <a href="index.html" class="brand">
     <span class="brand-mark">▣</span>
     <span class="brand-text">TALLER<span class="brand-accent">/</span>ESTAMPA</span>
   </a>
   <nav class="nav">
-    <a href="#galeria">Galería</a>
-    <a href="#personalizar">Personalizar</a>
-    <a href="#empresas">Empresas</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#contacto" class="nav-cta">Pedir ahora</a>
+    <a href="galeria.html">Galería</a>
+    <a href="personalizar.html">Personalizar</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="personalizar.html" class="nav-cta">Pedir ahora</a>
   </nav>
 </header>
 
-<main id="top">
+<main>
 
-  <!-- HERO / PERSONALIZADOR -->
-  <section class="hero" id="personalizar">
-    <div class="hero-text">
-      <p class="eyebrow">Serigrafía · Camisetas · Buzos</p>
-      <h1 class="hero-title">
-        <span class="spray-line">Diseña tu</span>
-        <span class="spray-line">estampa</span>
-        <span class="spray-line hero-title-accent">en vivo.</span>
-      </h1>
-      <p class="hero-sub">Elige la prenda, el color de la tela y tu estampado. Lo que ves aquí es lo que sale del taller.</p>
-      <div class="hero-tags">
-        <span class="tag-pill">Algodón 100%</span>
-        <span class="tag-pill">Serigrafía y DTF</span>
-        <span class="tag-pill">Pedido mínimo: 1 unidad</span>
-      </div>
-    </div>
-
-    <div class="swatch-card" id="customizer">
-      <div class="swatch-tag">
-        <span class="swatch-tag-label">FICHA DE PRENDA</span>
-        <span class="swatch-tag-id">N.° <span id="orderId">0427</span></span>
-      </div>
-
-      <div class="mockup-stage">
-        <svg id="garmentSvg" viewBox="0 0 360 420" class="garment-svg">
-          <!-- Camiseta -->
-          <g id="garment-tshirt" class="garment-shape">
-            <path class="garment-fill" d="M120 18 L150 8 C160 28 200 28 210 8 L240 18 L300 55 L275 110 L240 92 L240 400 L120 400 L120 92 L85 110 L60 55 Z"/>
-            <path class="garment-shade" d="M120 18 L150 8 C160 28 200 28 210 8 L240 18 L235 32 C205 48 155 48 125 32 Z" opacity="0.18"/>
-          </g>
-          <!-- Buzo -->
-          <g id="garment-hoodie" class="garment-shape" style="display:none">
-            <path class="garment-fill" d="M115 25 C108 8 95 4 78 12 L40 35 L20 80 L55 100 L70 78 L70 400 L290 400 L290 78 L305 100 L340 80 L320 35 L282 12 C265 4 252 8 245 25 C225 42 135 42 115 25 Z"/>
-            <path class="garment-shade" d="M115 25 C135 42 225 42 245 25 L240 45 C215 58 145 58 120 45 Z" opacity="0.18"/>
-            <ellipse class="garment-shade" cx="180" cy="38" rx="34" ry="10" opacity="0.12"/>
-          </g>
-          <!-- Zona de estampado -->
-          <image id="printImage" x="130" y="140" width="100" height="100" preserveAspectRatio="xMidYMid meet" opacity="0"/>
-          <rect id="printZoneOutline" x="130" y="140" width="100" height="100" fill="none" stroke="#ffffff33" stroke-dasharray="4 4" rx="4"/>
-        </svg>
-      </div>
-
-      <div class="controls">
-
-        <div class="control-block">
-          <label class="control-label">01 / Tipo de prenda</label>
-          <div class="seg-control" id="garmentControl">
-            <button class="seg-btn active" data-garment="tshirt">Camiseta</button>
-            <button class="seg-btn" data-garment="hoodie">Buzo</button>
-          </div>
-        </div>
-
-        <div class="control-block">
-          <label class="control-label">02 / Color de tela</label>
-          <div class="color-row" id="colorControl">
-            <button class="color-dot active" style="--c:#0B0A12" data-color="#0B0A12" title="Negro asfalto"></button>
-            <button class="color-dot" style="--c:#F4F2F8" data-color="#F4F2F8" title="Blanco"></button>
-            <button class="color-dot" style="--c:#FF2EC4" data-color="#FF2EC4" title="Magenta neón"></button>
-            <button class="color-dot" style="--c:#1AFCEA" data-color="#1AFCEA" title="Cian eléctrico"></button>
-            <button class="color-dot" style="--c:#D9FF1E" data-color="#D9FF1E" title="Amarillo ácido"></button>
-            <button class="color-dot" style="--c:#2A0E45" data-color="#2A0E45" title="Violeta profundo"></button>
-          </div>
-        </div>
-
-        <div class="control-block">
-          <label class="control-label">03 / Estampado</label>
-          <div class="print-row" id="printControl">
-            <button class="print-thumb" data-print="" title="Sin estampado">
-              <span>Ø</span>
-            </button>
-            <button class="print-thumb active" data-print="https://api.iconify.design/ph/mountains-fill.svg?color=%23FF2EC4" title="Montañas"></button>
-            <button class="print-thumb" data-print="https://api.iconify.design/ph/lightning-fill.svg?color=%231AFCEA" title="Rayo"></button>
-            <button class="print-thumb" data-print="https://api.iconify.design/ph/flower-lotus-fill.svg?color=%23D9FF1E" title="Flor"></button>
-            <label class="print-thumb print-upload" title="Subir tu diseño">
-              <input type="file" id="printUpload" accept="image/*" hidden>
-              <span>↑</span>
-            </label>
-          </div>
-          <input type="range" id="printSize" min="40" max="160" value="100" class="size-slider">
-          <span class="control-hint">Tamaño del estampado</span>
-        </div>
-
-        <button class="cta-button" id="addToOrder">Agregar al pedido →</button>
-      </div>
-    </div>
+  <section class="landing-hero">
+    <p class="eyebrow" style="justify-content:center; display:flex;">Serigrafía · Camisetas · Buzos · Corporativo</p>
+    <h1 class="landing-title">Tu estampa,<br>tu <span class="accent">taller.</span></h1>
+    <p class="landing-sub">Diseña tu prenda en vivo, explora el catálogo o cotiza estampado corporativo para tu empresa. Elige por dónde empezar.</p>
   </section>
 
-  <!-- GALERIA -->
-  <section class="gallery" id="galeria">
-    <div class="section-head">
-      <p class="eyebrow">Catálogo</p>
-      <h2 class="section-title">Diseños ya listos para estampar</h2>
-      <p class="section-sub">Toca cualquier diseño para llevarlo directo al personalizador.</p>
-    </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <!-- Las cards se generan con JS -->
-    </div>
-  </section>
-
-  <!-- EMPRESAS / CORPORATIVO -->
-  <section class="corp" id="empresas">
-    <div class="corp-inner">
-      <div class="corp-head">
-        <p class="eyebrow eyebrow-corp">Estampado corporativo</p>
-        <h2 class="section-title corp-title">Tu logo, en serie y a tiempo</h2>
-        <p class="section-sub corp-sub">Uniformes, dotación y merchandising con tu marca aplicada con la misma calidad del catálogo, en volumen y con factura.</p>
-      </div>
-
-      <div class="corp-grid">
-        <div class="corp-card">
-          <span class="corp-num">01</span>
-          <h3>Identidad consistente</h3>
-          <p>Tu logo y colores corporativos reproducidos con precisión en cada prenda del lote, sin variaciones entre unidades.</p>
-        </div>
-        <div class="corp-card">
-          <span class="corp-num">02</span>
-          <h3>Precio por volumen</h3>
-          <p>Tarifas escalonadas desde 12 unidades. Entre más grande el pedido, menor el costo por prenda.</p>
-        </div>
-        <div class="corp-card">
-          <span class="corp-num">03</span>
-          <h3>Facturación y soporte</h3>
-          <p>Factura electrónica, cotización formal por escrito y un solo contacto para todo el proceso.</p>
-        </div>
-        <div class="corp-card">
-          <span class="corp-num">04</span>
-          <h3>Tallas mixtas</h3>
-          <p>Un mismo pedido con distintas tallas y dos tipos de prenda, coordinado en una sola entrega.</p>
-        </div>
-      </div>
-
-      <div class="corp-cta-row">
-        <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20cotizar%20un%20pedido%20corporativo%20con%20mi%20logo." class="cta-button cta-button-corp" target="_blank" rel="noopener">Cotizar pedido corporativo →</a>
-        <span class="corp-cta-hint">Respuesta en menos de 24 horas hábiles</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="process" id="proceso">
-    <div class="section-head">
-      <p class="eyebrow">Cómo funciona</p>
-      <h2 class="section-title">De la idea a la prenda</h2>
-    </div>
-    <div class="process-strip">
-      <div class="process-step">
-        <span class="process-label">CORTE</span>
-        <p>Eliges camiseta o buzo, talla y color de tela base.</p>
-      </div>
-      <div class="process-step">
-        <span class="process-label">ARTE</span>
-        <p>Subes tu diseño o eliges uno del catálogo, ajustas tamaño y posición.</p>
-      </div>
-      <div class="process-step">
-        <span class="process-label">ESTAMPA</span>
-        <p>Serigrafía o DTF según el diseño, con acabado durable al lavado.</p>
-      </div>
-      <div class="process-step">
-        <span class="process-label">ENTREGA</span>
-        <p>Confirmamos por WhatsApp y coordinamos envío o recogida.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="contact" id="contacto">
-    <div class="contact-inner">
-      <h2 class="section-title">¿Listo para tu pedido?</h2>
-      <p class="section-sub">Escríbenos con tu diseño personalizado y te confirmamos precio y tiempos.</p>
-      <a href="https://wa.me/573000000000" class="cta-button cta-button-light" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-    </div>
+  <section class="category-grid">
+    <a href="personalizar.html" class="category-card cat-personalizar">
+      <span class="category-num">01 / PERSONALIZADOR</span>
+      <h2>Diseña tu prenda en vivo</h2>
+      <p>Elige camiseta o buzo, color de tela y estampado. Ves el resultado al instante antes de pedir.</p>
+    </a>
+    <a href="galeria.html" class="category-card cat-galeria">
+      <span class="category-num">02 / CATÁLOGO</span>
+      <h2>Diseños ya listos</h2>
+      <p>Explora estampados que ya tenemos disponibles y llévalos directo a tu prenda.</p>
+    </a>
+    <a href="empresas.html" class="category-card cat-empresas">
+      <span class="category-num">03 / CORPORATIVO</span>
+      <h2>Estampado para tu empresa</h2>
+      <p>Uniformes y merchandising con tu logo, precio por volumen y factura electrónica.</p>
+    </a>
   </section>
 
 </main>

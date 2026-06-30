@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de diseños — Taller / Estampa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scanlines"></div>
+
+<header class="topbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">▣</span>
+    <span class="brand-text">TALLER<span class="brand-accent">/</span>ESTAMPA</span>
+  </a>
+  <nav class="nav">
+    <a href="galeria.html">Galería</a>
+    <a href="personalizar.html">Personalizar</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="personalizar.html" class="nav-cta">Pedir ahora</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Volver al inicio</a>
+    <p class="eyebrow">Catálogo</p>
+    <h2 class="section-title">Diseños ya listos para estampar</h2>
+    <p class="section-sub">Toca cualquier diseño para llevarlo directo al personalizador.</p>
+  </div>
+
+  <!-- GALERIA -->
+  <section class="gallery" id="galeria">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Las cards se generan con JS -->
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="contact-inner">
+      <h2 class="section-title">¿Listo para tu pedido?</h2>
+      <p class="section-sub">Escríbenos con tu diseño personalizado y te confirmamos precio y tiempos.</p>
+      <a href="https://wa.me/573000000000" class="cta-button cta-button-light" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Taller / Estampa</span>
+  <span class="footer-dot">·</span>
+  <span>Hecho a mano en Colombia</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
