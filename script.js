@@ -3,12 +3,12 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ===== Catálogo de diseños (edita esta lista para tus propios diseños) =====
 const designs = [
-  { name: "Cordillera", tag: "DTF · Espalda", img: "https://api.iconify.design/ph/mountains-fill.svg?color=%23161616" },
-  { name: "Tormenta", tag: "Serigrafía · Pecho", img: "https://api.iconify.design/ph/lightning-fill.svg?color=%23FF5A1F" },
-  { name: "Loto", tag: "DTF · Pecho", img: "https://api.iconify.design/ph/flower-lotus-fill.svg?color=%232B4C7E" },
-  { name: "Sol Cenital", tag: "Serigrafía · Espalda", img: "https://api.iconify.design/ph/sun-fill.svg?color=%23161616" },
-  { name: "Onda", tag: "DTF · Pecho", img: "https://api.iconify.design/ph/wave-sine-bold.svg?color=%23161616" },
-  { name: "Estrella Guía", tag: "Serigrafía · Pecho", img: "https://api.iconify.design/ph/star-four-bold.svg?color=%23FF5A1F" },
+  { name: "Cordillera", tag: "DTF · Espalda", img: "https://api.iconify.design/ph/mountains-fill.svg?color=%23FF2EC4" },
+  { name: "Tormenta", tag: "Serigrafía · Pecho", img: "https://api.iconify.design/ph/lightning-fill.svg?color=%231AFCEA" },
+  { name: "Loto", tag: "DTF · Pecho", img: "https://api.iconify.design/ph/flower-lotus-fill.svg?color=%23D9FF1E" },
+  { name: "Sol Cenital", tag: "Serigrafía · Espalda", img: "https://api.iconify.design/ph/sun-fill.svg?color=%23FF2EC4" },
+  { name: "Onda", tag: "DTF · Pecho", img: "https://api.iconify.design/ph/wave-sine-bold.svg?color=%231AFCEA" },
+  { name: "Estrella Guía", tag: "Serigrafía · Pecho", img: "https://api.iconify.design/ph/star-four-bold.svg?color=%23D9FF1E" },
 ];
 
 const galleryGrid = document.getElementById('galleryGrid');
@@ -118,9 +118,9 @@ document.getElementById('printUpload').addEventListener('change', e => {
 printSizeSlider.addEventListener('input', e => resizePrint(Number(e.target.value)));
 
 // Inicialización
-setColor('#F7F4EE');
+setColor('#0B0A12');
 resizePrint(100);
-setPrint("https://api.iconify.design/ph/mountains-fill.svg?color=%23161616", document.querySelector('.print-thumb.active'));
+setPrint("https://api.iconify.design/ph/mountains-fill.svg?color=%23FF2EC4", document.querySelector('.print-thumb.active'));
 
 // Número de pedido pseudoaleatorio para la "ficha"
 document.getElementById('orderId').textContent = String(Math.floor(Math.random() * 900) + 100).padStart(4, '0');

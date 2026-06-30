@@ -4,7 +4,10 @@ Sitio estático listo para publicar gratis en **GitHub Pages**. Incluye:
 
 - Galería de diseños (`script.js`, arreglo `designs`)
 - Personalizador en vivo: tipo de prenda (camiseta/buzo), color de tela y estampado (catálogo o imagen propia subida por el usuario)
+- Sección "Empresas" para pedidos corporativos (logos, volumen, facturación)
 - Botón de pedido que abre WhatsApp con el resumen de la prenda armada
+
+Estilo visual: neón sobre fondo oscuro, tipografía urbana en los títulos (estilo grafiti/cartel) combinada con tipografía limpia en el cuerpo de texto, para que el sitio se vea llamativo sin perder seriedad ante clientes corporativos.
 
 ## Archivos
 

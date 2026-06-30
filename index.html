@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taller de Estampado — Camisetas y Buzos a tu medida</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="grain"></div>
+<div class="scanlines"></div>
 
 <header class="topbar">
   <a href="#top" class="brand">
@@ -20,6 +21,7 @@
   <nav class="nav">
     <a href="#galeria">Galería</a>
     <a href="#personalizar">Personalizar</a>
+    <a href="#empresas">Empresas</a>
     <a href="#proceso">Proceso</a>
     <a href="#contacto" class="nav-cta">Pedir ahora</a>
   </nav>
@@ -31,7 +33,11 @@
   <section class="hero" id="personalizar">
     <div class="hero-text">
       <p class="eyebrow">Serigrafía · Camisetas · Buzos</p>
-      <h1 class="hero-title">Diseña tu<br>estampa<br><span class="hero-title-accent">en vivo.</span></h1>
+      <h1 class="hero-title">
+        <span class="spray-line">Diseña tu</span>
+        <span class="spray-line">estampa</span>
+        <span class="spray-line hero-title-accent">en vivo.</span>
+      </h1>
       <p class="hero-sub">Elige la prenda, el color de la tela y tu estampado. Lo que ves aquí es lo que sale del taller.</p>
       <div class="hero-tags">
         <span class="tag-pill">Algodón 100%</span>
@@ -61,7 +67,7 @@
           </g>
           <!-- Zona de estampado -->
           <image id="printImage" x="130" y="140" width="100" height="100" preserveAspectRatio="xMidYMid meet" opacity="0"/>
-          <rect id="printZoneOutline" x="130" y="140" width="100" height="100" fill="none" stroke="#16161644" stroke-dasharray="4 4" rx="4"/>
+          <rect id="printZoneOutline" x="130" y="140" width="100" height="100" fill="none" stroke="#ffffff33" stroke-dasharray="4 4" rx="4"/>
         </svg>
       </div>
 
@@ -78,12 +84,12 @@
         <div class="control-block">
           <label class="control-label">02 / Color de tela</label>
           <div class="color-row" id="colorControl">
-            <button class="color-dot active" style="--c:#F7F4EE" data-color="#F7F4EE" title="Crudo"></button>
-            <button class="color-dot" style="--c:#161616" data-color="#161616" title="Negro"></button>
-            <button class="color-dot" style="--c:#2B4C7E" data-color="#2B4C7E" title="Azul hilo"></button>
-            <button class="color-dot" style="--c:#FF5A1F" data-color="#FF5A1F" title="Naranja"></button>
-            <button class="color-dot" style="--c:#6B5B4D" data-color="#6B5B4D" title="Café"></button>
-            <button class="color-dot" style="--c:#3B3B3B" data-color="#3B3B3B" title="Gris carbón"></button>
+            <button class="color-dot active" style="--c:#0B0A12" data-color="#0B0A12" title="Negro asfalto"></button>
+            <button class="color-dot" style="--c:#F4F2F8" data-color="#F4F2F8" title="Blanco"></button>
+            <button class="color-dot" style="--c:#FF2EC4" data-color="#FF2EC4" title="Magenta neón"></button>
+            <button class="color-dot" style="--c:#1AFCEA" data-color="#1AFCEA" title="Cian eléctrico"></button>
+            <button class="color-dot" style="--c:#D9FF1E" data-color="#D9FF1E" title="Amarillo ácido"></button>
+            <button class="color-dot" style="--c:#2A0E45" data-color="#2A0E45" title="Violeta profundo"></button>
           </div>
         </div>
 
@@ -93,9 +99,9 @@
             <button class="print-thumb" data-print="" title="Sin estampado">
               <span>Ø</span>
             </button>
-            <button class="print-thumb active" data-print="https://api.iconify.design/ph/mountains-fill.svg?color=%23161616" title="Montañas"></button>
-            <button class="print-thumb" data-print="https://api.iconify.design/ph/lightning-fill.svg?color=%23161616" title="Rayo"></button>
-            <button class="print-thumb" data-print="https://api.iconify.design/ph/flower-lotus-fill.svg?color=%23161616" title="Flor"></button>
+            <button class="print-thumb active" data-print="https://api.iconify.design/ph/mountains-fill.svg?color=%23FF2EC4" title="Montañas"></button>
+            <button class="print-thumb" data-print="https://api.iconify.design/ph/lightning-fill.svg?color=%231AFCEA" title="Rayo"></button>
+            <button class="print-thumb" data-print="https://api.iconify.design/ph/flower-lotus-fill.svg?color=%23D9FF1E" title="Flor"></button>
             <label class="print-thumb print-upload" title="Subir tu diseño">
               <input type="file" id="printUpload" accept="image/*" hidden>
               <span>↑</span>
@@ -119,6 +125,45 @@
     </div>
     <div class="gallery-grid" id="galleryGrid">
       <!-- Las cards se generan con JS -->
+    </div>
+  </section>
+
+  <!-- EMPRESAS / CORPORATIVO -->
+  <section class="corp" id="empresas">
+    <div class="corp-inner">
+      <div class="corp-head">
+        <p class="eyebrow eyebrow-corp">Estampado corporativo</p>
+        <h2 class="section-title corp-title">Tu logo, en serie y a tiempo</h2>
+        <p class="section-sub corp-sub">Uniformes, dotación y merchandising con tu marca aplicada con la misma calidad del catálogo, en volumen y con factura.</p>
+      </div>
+
+      <div class="corp-grid">
+        <div class="corp-card">
+          <span class="corp-num">01</span>
+          <h3>Identidad consistente</h3>
+          <p>Tu logo y colores corporativos reproducidos con precisión en cada prenda del lote, sin variaciones entre unidades.</p>
+        </div>
+        <div class="corp-card">
+          <span class="corp-num">02</span>
+          <h3>Precio por volumen</h3>
+          <p>Tarifas escalonadas desde 12 unidades. Entre más grande el pedido, menor el costo por prenda.</p>
+        </div>
+        <div class="corp-card">
+          <span class="corp-num">03</span>
+          <h3>Facturación y soporte</h3>
+          <p>Factura electrónica, cotización formal por escrito y un solo contacto para todo el proceso.</p>
+        </div>
+        <div class="corp-card">
+          <span class="corp-num">04</span>
+          <h3>Tallas mixtas</h3>
+          <p>Un mismo pedido con distintas tallas y dos tipos de prenda, coordinado en una sola entrega.</p>
+        </div>
+      </div>
+
+      <div class="corp-cta-row">
+        <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20cotizar%20un%20pedido%20corporativo%20con%20mi%20logo." class="cta-button cta-button-corp" target="_blank" rel="noopener">Cotizar pedido corporativo →</a>
+        <span class="corp-cta-hint">Respuesta en menos de 24 horas hábiles</span>
+      </div>
     </div>
   </section>
 
