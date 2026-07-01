@@ -149,6 +149,6 @@ if (garmentSvg) {
     const printBtn = document.querySelector('.print-thumb.active');
     const print = printBtn ? (printBtn.title || 'diseño personalizado subido') : 'sin estampado';
     const msg = encodeURIComponent(`Hola, quiero pedir: ${garment} color ${color}, estampado: ${print}.`);
-    window.open(`https://wa.me/573000000000?text=${msg}`, '_blank');
+    window.open(`https://wa.me/573208349019?text=${msg}`, '_blank');
   });
 }
